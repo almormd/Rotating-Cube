@@ -5,34 +5,21 @@
 //  Created by Aleksandr Morozov on 2/16/25.
 //
 
-#include <SDL2/SDL.h>
-#include <vector>
-#include <iostream>
+#include "screen.h"
 
-int main() {
-}
-
-class Screen
+int main()
 {
-    SDL_Event e;
-    SDL_Window* window;
-    SDL_Renderer* renderer;
-    std::vector<SDL_FPoint> points;
+    Screen screen;
     
-    Screen ()
+    for(int i = 0; i < 100; i++)
     {
-        SDL_Init(SDL_INIT_VIDEO);
-        SDL_CreateWindowAndRenderer(640*2, 480*2, 0, &window, &renderer);
+        screen.pixel(rand()%640, rand()%480);
     }
     
-    void pixel(float x, float y)
+    while(true)
     {
-        points.emplace_back(x,y);
+        screen.show();
+        screen.input();
     }
-    
-    void show()
-    {
-        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-    }
-};
-
+    return 0;
+}
