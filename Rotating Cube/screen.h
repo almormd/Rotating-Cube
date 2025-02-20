@@ -1,10 +1,3 @@
-//
-//  Header.h
-//  Rotating Cube
-//
-//  Created by Aleksandr Morozov on 2/17/25.
-//
-
 #include <SDL2/SDL.h>
 #include <vector>
 

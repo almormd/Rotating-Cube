@@ -1,10 +1,3 @@
-//
-//  main.cpp
-//  Rotating Cube
-//
-//  Created by Aleksandr Morozov on 2/16/25.
-//
-
 #include "screen.h"
 
 int main()
